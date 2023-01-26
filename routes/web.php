@@ -28,6 +28,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/re', function () {
+    return view('auth/register2');
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/profile', function () {
