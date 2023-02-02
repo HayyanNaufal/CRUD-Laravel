@@ -35,13 +35,10 @@
                     <tr>
                         <td class="text-center">{{ ++$i }}</td>
                         <td>{{ $siswa->NIS }}</td>
-                        <td>{{ $siswa->NamaSiswa }}</td>
+                        <td><a href="{{ route('sisw.destroy',$siswa->id) }}"> {{ $siswa->NamaSiswa }} </a></td>
                         <td>{{ $siswa->Alamat }}</td>
                         <td class="text-center">
                             <form action="{{ route('sisw.destroy',$siswa->id) }}" method="POST">
-
-                            <a class="btn btn-info btn-sm" href="{{ route('sisw.show',$siswa->id) }}">Show</a>
-
                                 <a class="btn btn-warning btn-sm" href="{{ route('sisw.edit',$siswa->id) }}">Edit</a>
 
                                 @csrf
