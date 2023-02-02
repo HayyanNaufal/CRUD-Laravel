@@ -65,7 +65,7 @@
                             <button type="submit" class="btn btn-primary py-3 w-100 mb-4">
                                 {{ __('Login') }}
                             </button>
-                            <p class="text-center mb-0">Don't have an Account? <a href="{{ route('register') }}">Register</a></p>
+                            <p class="text-center mb-0">Belum punya akun? <a href="/regi">Register</a></p>
                         </form>
                     </div>
                 </div>
