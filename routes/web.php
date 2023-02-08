@@ -44,3 +44,4 @@ Route::resource('/nilai', \App\Http\Controllers\NilaiController::class);
 
 // hidden
 Route::resource('/poto', \App\Http\Controllers\PotoController::class);
+
