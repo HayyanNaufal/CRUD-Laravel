@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Nilai;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class SiswaControllers extends Controller
 {
@@ -57,7 +59,8 @@ class SiswaControllers extends Controller
      */
     public function show(Siswa $sisw)
     {
-        return view('sisw.show',compact('sisw'));
+        $nilais = Nilai::latest()->get();
+        return view('sisw.show',compact('sisw','nilais'));
     }
 
     /**
