@@ -39,7 +39,7 @@
             <h2>Nilai Siswa</h2>
 
                 <div class="float-right">
-                    <a href="javascript:void(0)" class="btn btn-success" id="tambah-nilai">TAMBAH</a>
+                    <a href="javascript:void(0)" class="btn btn-success" id="btn-create">TAMBAH</a>
                 </div>
             <table class="m-3 table table-bordered table-striped ">
                 <thead>
@@ -74,4 +74,6 @@
         </div>
     </div>
 </div>
+@include('../components/create')
+
 @endsection

@@ -106,4 +106,32 @@ class SiswaControllers extends Controller
 
         return redirect()->route('sisw.index')->with('succes','Siswa Berhasil di Hapus');
     }
+
+
+    public function nilai(Perlu $perlu)
+    {
+        //define validation rules
+        $validator = Validator::make($perlu->all(), [
+            'nis'     => 'required',
+            'nama'     => 'required',
+            'ipa'   => 'required',
+            'ips'   => 'required',
+            'mtk'   => 'required',
+        ]);
+
+        //check if validation fails
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+
+        //create post
+        $nilai = create($request->all());
+
+        //return response
+        return response()->json([
+            'success' => true,
+            'message' => 'Data Berhasil Disimpan!',
+            'data'    => $nilai  
+        ]);
+    }
 }
